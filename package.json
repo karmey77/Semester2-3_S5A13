@@ -21,6 +21,7 @@
   "homepage": "https://github.com/karmey77/Semester2-3_S5A13#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.3",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",

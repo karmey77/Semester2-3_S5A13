@@ -2,6 +2,9 @@
 const express = require('express')
 const router = express.Router()
 const Account = require('../../models/Account') // 引用 Todo model
+const cookieParser = require('cookie-parser')
+
+router.use(cookieParser('ALPHA CAMP'))
 
 // 定義首頁路由
 // index
@@ -15,7 +18,8 @@ router.post('/', (req, res) => {
             const user = await Account.findOne({ email }).lean()
             if (user) {
                 if (user.password === password) {
-                    res.send(`Welcome back, ${user.firstName}`)
+                    res.cookie('NID', user._id, { path: '/', signed: true, maxAge: 600000 })
+                    res.send(`Login successful!`)
                 } else {
                     res.send(`Incorrect password for user ${email}`)
                 }
