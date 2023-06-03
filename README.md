@@ -16,8 +16,9 @@ Login page
     
     3. users can receive wrong email messages after enter the wrong email 
     
-    4. users can welcome back messages after successfully login
+    4. users can receive welcome back messages after successfully login
     
+    5. users' login information can be saved as cookies for 10 mins
     
   --dependancies:
   
@@ -35,6 +36,7 @@ Login page
     
     method-override 3.0.0
     
+    cookie-parser 1.4.6
     
   --how to start:
   
